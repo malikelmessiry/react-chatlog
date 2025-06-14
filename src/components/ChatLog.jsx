@@ -10,7 +10,7 @@ const ChatLog = ({ entries, onToggleLike }) => {
             body={entry.body}
             timeStamp={entry.timeStamp}
             liked={entry.liked}
-            toggleLike={onToggleLike}
+            onToggleLike={onToggleLike}
         />
     ));
 
