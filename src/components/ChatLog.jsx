@@ -1,7 +1,7 @@
 import './ChatLog.css';
 import ChatEntry from './ChatEntry';
 
-const ChatLog = ({ entries }) => {
+const ChatLog = ({ entries, onToggleLike }) => {
     const chatEntries = entries.map(entry => (
         <ChatEntry
             key={entry.id}
@@ -9,6 +9,8 @@ const ChatLog = ({ entries }) => {
             sender={entry.sender}
             body={entry.body}
             timeStamp={entry.timeStamp}
+            liked={entry.liked}
+            toggleLike={onToggleLike}
         />
     ));
 
